@@ -1,4 +1,4 @@
-await context.bot.send_message(chat_id=TELEGRAM_CHAT_ID, text="🚨 Teste de alerta FIRE!")
+
 import os, requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
@@ -65,10 +65,9 @@ async def alerta(context: ContextTypes.DEFAULT_TYPE):
 
         except Exception as e:
             print(f"Erro ao analisar {nome}: {e}")
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id,
-                                   text="🔥 BOT FIRE ativo! 8×/dia")
+    await context.bot.send_message(chat_id=TELEGRAM_CHAT_ID, text="🚨 Teste de alerta FIRE!")
+
 
 if __name__ == "__main__":
     keep_alive()
