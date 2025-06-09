@@ -1,3 +1,4 @@
+await context.bot.send_message(chat_id=TELEGRAM_CHAT_ID, text="🚨 Teste de alerta FIRE!")
 import os, requests
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
